@@ -51,7 +51,13 @@ footer {
   font-size: 2.5em; /* Adjust according to your preference */
   margin-top: 2em; /* Adjust according to your preference */
 }
+.button-center {
+  display: flex;
+  justify-content: center; /* Horizontally center children */
+  margin-top: 3em; /* Adjust according to your preference */
 
+  align-items: center; /* Vertically center children */
+}
 .text-center {
   margin-top: 4em; /* Adjust according to your preference */
 }
