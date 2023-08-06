@@ -1,0 +1,255 @@
+body, html {
+  height: 100%; /* Full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  background: linear-gradient(to right, #2C2F33 0%, #23272A 100%);
+  color: #E0E1DD;
+}
+
+.btn {
+  background-color: #7289DA;
+  color: #E0E1DD;
+}
+
+.btn img {
+  width: 30px;
+  height: 30px;
+  margin-right: 2px;
+}
+
+.hide {
+  display: none;
+}
+
+#content {
+  flex: 1 0 auto; /* Flex grow, shrink, basis */
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  flex-shrink: 0; /* Prevents the footer from shrinking */
+  width: 100%; /* Full width */
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  padding: 10px 0;
+}
+.container {
+  flex-grow: 1; /* It will take up any remaining space */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* distribute items evenly, with equal space around them */
+}
+
+.header {
+  display: flex;
+  justify-content: center; /* Horizontally center children */
+  align-items: center; /* Vertically center children */
+  text-align: center; /* Center text */
+  height: 100%; /* Take up full height of parent */
+  font-size: 2.5em; /* Adjust according to your preference */
+  margin-top: 2em; /* Adjust according to your preference */
+}
+
+.text-center {
+  margin-top: 4em; /* Adjust according to your preference */
+}
+
+.text-center:last-of-type {
+  margin-top: 6em; /* Adjust according to your preference */
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+body {
+  font-size: 1.2em; /* Decreased base font size */
+}
+.container {
+  max-width: 80%; /* Adjust container width */
+}
+.header {
+  font-size: 2.5em; /* Decreased header font size */
+}
+.btn {
+  font-size: 1.2em; /* Decreased button font size */
+  padding: 15px 30px; /* Adjust button padding */
+}
+footer {
+  font-size: 1.0em; /* Change according to your needs */
+  padding: 20px 0;
+}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+body {
+  font-size: 1.2em;
+}
+.header {
+  font-size: 2.4em;
+}
+.btn {
+  font-size: 1.2em;
+  padding: 16px 32px;
+}
+footer {
+  font-size: 0.9em; /* Change according to your needs */
+  padding: 18px 0;
+}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+body {
+  font-size: 1.1em;
+}
+.header {
+  font-size: 2.2em;
+}
+.btn {
+  font-size: 1.1em;
+  padding: 14px 28px;
+}
+footer {
+  font-size: 0.8em; /* Change according to your needs */
+  padding: 14px 0;
+}
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575px) {
+body {
+  font-size: 1em;
+}
+.header {
+  font-size: 2em;
+}
+.btn {
+  font-size: 1em;
+  padding: 12px 24px;
+}
+footer {
+  padding: 14px 0;
+}
+}
+
+.btn:hover {
+    background-color: #5865F2;  /* Slightly lighter shade for hover */
+    transition: background-color 0.3s ease;
+}
+
+@keyframes floatShapes {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes colorTransition {
+    0% { background-color: #5865F2; }
+    50% { background-color: #7289DA; }
+    100% { background-color: #5865F2; }
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: floatShapes 5s infinite, colorTransition 10s infinite;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: floatShapes 6s infinite reverse, colorTransition 12s infinite;
+    z-index: -1;
+}
+
+body, html {
+  background: linear-gradient(45deg, #ff0057, #ff5400, #ffbd00, #e5ff00, #00ff85, #00b3ff, #5a00ff);
+  background-size: 600% 100%;
+  animation: GradientBackground 15s ease infinite;
+}
+
+@keyframes GradientBackground {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Geometric shapes */
+body::before {
+  content: "";
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 85, 0, 0.5);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotate(30deg);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 70%;
+  left: 80%;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(90, 0, 255, 0.5);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@keyframes GradientBackground {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+.btn {
+  background-color: #E5E5E5;  /* Lighter shade for the button */
+  color: #000000;  /* Black text */
+}
+
+body, html {
+  color: #000000;  /* Black text for better readability */
+}
+
+footer {
+  background-color: #000000;  /* Black background for the footer */
+  color: #FFFFFF;  /* White text */
+  border-top: none;  /* Remove the black border */
+}
+
+#claimButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Use the full viewport height to center the button */
+}
+
+#claimButtonContainer .btn {
+  margin: 20px auto;
+  width: 60%;  /* Making the button shorter */
+}
