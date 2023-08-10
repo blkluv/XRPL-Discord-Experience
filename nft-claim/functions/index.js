@@ -18,7 +18,7 @@ exports.claimNFT = functions.https.onRequest((request, response) => {
     }
     const address = data.address;
     const taxonid = 1; // Hardcoding taxonid to 1
-    const wallet = xrpl.Wallet.fromSeed("sEdVbksTsuoYYqFVG81ZT6JqtGhcq9S");
+    const wallet = xrpl.Wallet.fromSeed("Your wallet seed");
     console.log("Received request data:", address);
     const client = new xrpl.Client("wss://s.altnet.rippletest.net:51233/");
     await client.connect();
